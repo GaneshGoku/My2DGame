@@ -28,7 +28,6 @@ public class Lighting {
 	public Lighting(GamePanel gp) {
 		this.gp=gp;
 		setLightSource();
-		
 	}
 	
 	public void setLightSource() {
@@ -62,7 +61,6 @@ public class Lighting {
 			
 			g2.setPaint(gPaint);
 		}
-		
 		g2.fillRect(0, 0, gp.screenwidth, gp.screenheight);
 		
 		g2.dispose();
@@ -77,10 +75,8 @@ public class Lighting {
 			setLightSource();
 			gp.player.lightupdated=false;
 		}
-		
 		if(dayState==day) {
-			dayCounter++;
-			
+			dayCounter++;	
 			if(dayCounter>600) {
 				dayState=dusk;
 				dayCounter=0;

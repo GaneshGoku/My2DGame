@@ -70,7 +70,6 @@ public class MON_Slime extends Entity {
 	
 	public void damageReaction() {
 		actionLockCounter=0;
-//		direction = gp.player.direction;
 		onPath=true;
 	}
 	public void checkDrop() {

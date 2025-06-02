@@ -119,8 +119,6 @@ public class MON_SkeletonLord extends Entity {
 	
 	public void damageReaction() {
 		actionLockCounter=0;
-//		direction = gp.player.direction;
-//		onPath=true;
 	}
 	public void checkDrop() {
 		

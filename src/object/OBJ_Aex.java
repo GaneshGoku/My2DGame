@@ -16,7 +16,7 @@ public class OBJ_Aex extends Entity {
 		attackValue= 2;
 		attackArea.width=30;
 		attackArea.height=30;
-		description="[ Wooden Axe] \n Bit rusty";
+		description="[ Wooden Axe ] \n Bit rusty";
 		price=75;
 		knockBackPower=20;
 		motion1_duration=20;

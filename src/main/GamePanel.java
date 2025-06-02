@@ -68,21 +68,20 @@ public class GamePanel extends JPanel implements Runnable {
 	SaveLoad saveLoad= new SaveLoad(this);
 	Thread gameThread;
 	
-	
+	//player and npc
 	public Player player= new Player(this,keyH);
 	public Entity obj[][]= new Entity[maxMap][100];
 	public Entity npc[][]= new Entity[maxMap][10];
 	public Entity monster[][]= new Entity[maxMap][20];
 	
+	//activity elements
 	public InteractiveTile[][] iTile = new InteractiveTile[maxMap][50];
 	public Entity projectile[][]=new Entity[maxMap][20];
 //	public ArrayList<Entity> projectileList = new ArrayList<>();
 	ArrayList<Entity> entityList = new ArrayList<>();
 	public ArrayList<Entity> particleList= new ArrayList<>();
 	
-	
 	//game State
-	
 	public int gameState;
 	public final int titleState=0;
 	public final int playState=1;
@@ -96,6 +95,7 @@ public class GamePanel extends JPanel implements Runnable {
 	public final int sleepState=9;
 	public final int mapState=10;
 	
+	//Map things
 	public int currentArea;
 	public int nextArea; 
 	public final int indoor=50;
@@ -156,7 +156,6 @@ public class GamePanel extends JPanel implements Runnable {
 		
 		screenWidth2=Main.window.getWidth();
 		screenHeight2= Main.window.getHeight();
-		
 	}
 	
      public void startGameThread() {
@@ -255,7 +254,6 @@ public class GamePanel extends JPanel implements Runnable {
 		if(gameState==pauseState) {
 			//nothing for now
 		}
-		
 	}
 	public void drawToTempScreen() {
 		
@@ -358,8 +356,7 @@ public class GamePanel extends JPanel implements Runnable {
 					g2.drawString("Draw Time" + passed, x, y);y+=LineHeight;
 					g2.drawString("GodModeOn"+ keyH.godModeOn, x, y);
 					
-				}
-				
+				}	
 	}
 	
 	public void playMusic(int i) {
@@ -392,7 +389,6 @@ public class GamePanel extends JPanel implements Runnable {
 				playMusic(19);
 			}
 		}
-		
 		currentArea=nextArea;
 		aSetter.setMonster();
 	}

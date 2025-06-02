@@ -69,7 +69,6 @@ public class CollisionChecker {
 	public int checkObject(Entity entity, boolean player) {
 		int index=999;
 		
-		
 		String direction= entity.direction;
 		if(entity.knockBack==true) {
 			direction=entity.knockBackDirection;
@@ -151,16 +150,15 @@ public class CollisionChecker {
 						index=i;
 			    }
 				}
-				
 					entity.solidArea.x=entity.SolidAreaDefaultX;
 					entity.solidArea.y=entity.SolidAreaDefaultY;
 					target[gp.currentMap][i].solidArea.x= target[gp.currentMap][i].SolidAreaDefaultX;
 					target[gp.currentMap][i].solidArea.y= target[gp.currentMap][i].SolidAreaDefaultY;
 			}
 		}
-		
 		return index;
 	}
+	
 	public boolean checkPlayer(Entity entity) {
 		
 		boolean contactPlayer= false;
@@ -196,5 +194,4 @@ public class CollisionChecker {
 			
 			return contactPlayer;
 	}
-
 }

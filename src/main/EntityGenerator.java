@@ -48,8 +48,6 @@ public Entity getObject(String itemName) {
 		case OBJ_Shield_Wood.objName: obj=new OBJ_Shield_Wood(gp); break;
 		case OBJ_Sword_Normal.objName: obj=new OBJ_Sword_Normal(gp); break;
 		case OBJ_Tent.objName: obj=new OBJ_Tent(gp); break;
-		
-		
 		}
 		return obj;
 	}

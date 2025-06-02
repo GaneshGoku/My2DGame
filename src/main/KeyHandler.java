@@ -39,11 +39,11 @@ public class KeyHandler implements KeyListener  {
 		else if(gp.gameState==gp.dialogueState) {
 			dialogueState(code);
 		}
-        //Charater state
+        //Character state
 		else if(gp.gameState==gp.characterState) {
 			characterState(code);
 		}
-      //Option  state
+        //Option  state
       	else if(gp.gameState==gp.optionsState) {
       		optionsState(code);
       	}
@@ -56,28 +56,27 @@ public class KeyHandler implements KeyListener  {
       	else if(gp.gameState==gp.mapState) {
       		mapState(code);
       	}
-		
 	}
 	
 	public void titleState(int code) {
-		
+		//move up on title
 		if(code==KeyEvent.VK_W) {
 			gp.ui.commandNum--;
 			if(gp.ui.commandNum<0) {
 				gp.ui.commandNum=2;
 			}
-			
 		}
+		//move down in title
 		if(code==KeyEvent.VK_S) {
 			gp.ui.commandNum++;
 			if(gp.ui.commandNum>2) {
 				gp.ui.commandNum=0;
 			}
 		}
+		//chose
 		if(code==KeyEvent.VK_ENTER) {
 			if(gp.ui.commandNum==0) {
 				gp.gameState=gp.playState;
-				
 			}
 			if(gp.ui.commandNum==1) {
 				gp.saveLoad.load();
@@ -87,7 +86,6 @@ public class KeyHandler implements KeyListener  {
 				System.exit(0);
 			}
 		}
-		
 	}
 	public void playState(int code) {
 		
@@ -115,12 +113,15 @@ public class KeyHandler implements KeyListener  {
 		if(code==KeyEvent.VK_F) {
 			shotKey=true;
 		}
+		//options
 		if(code==KeyEvent.VK_ESCAPE) {
 			gp.gameState=gp.optionsState;
 		}
+		//show map
 		if(code==KeyEvent.VK_M) {
 			gp.gameState=gp.mapState;
 		}
+		//show mini Map
 		if(code==KeyEvent.VK_X) {
 			if(gp.map.miniMapOn==false) {
 				gp.map.miniMapOn=true;
@@ -132,7 +133,7 @@ public class KeyHandler implements KeyListener  {
 		if(code==KeyEvent.VK_SPACE) {
 			spacePressed=true;
 		}
-		//debug
+		//debug state
 		if(code==KeyEvent.VK_T) {
 			if(showDebugText==false) {
 				showDebugText=true;

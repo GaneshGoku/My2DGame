@@ -52,26 +52,16 @@ public class MON_Bat extends Entity{
 	
 	public void setAction() {	
 		if(onPath==true) {
-//			
-//			CheckStopChasingOrNot(gp.player,15,100);
-//			
-//			searchPath(getGoalCol(gp.player), getGoalRow(gp.player));
-//			
-//			checkShootOrNot(200,30);
 		}
 		else {
-//			CheckStartChasingOrNot(gp.player,5,100);
-			
 			getRandomDistance(30);
 		}
 	}
-
 	
 	public void damageReaction() {
 		actionLockCounter=0;
-//		direction = gp.player.direction;
-//		onPath=true;
 	}
+	
 	public void checkDrop() {
 		
 		int i= new Random().nextInt(100)+1;

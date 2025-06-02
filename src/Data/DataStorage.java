@@ -22,7 +22,7 @@ public class DataStorage implements Serializable {
     int currentWeaponSlot=0;
     int currentShieldSlot=0;
     
-    //objecy on msp
+    //object on map
     String mapObjectNames[][];
     int mapObjectWorldX[][];
     int mapObjectWorldY[][];

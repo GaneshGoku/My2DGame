@@ -49,9 +49,7 @@ public class Config {
 			BufferedReader br= new BufferedReader(new FileReader("config.txt"));
 			
 			String s= br.readLine();
-			
 			//Full screen
-			
 			if(s.equals("ON")) {
 				gp.fullScreenOn=true;
 			}
