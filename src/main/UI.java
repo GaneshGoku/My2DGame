@@ -59,10 +59,8 @@ public class UI {
             this.count = count;
         }
     }
-
     // List to store inventory items
     List<InventoryItem> inventoryItems;
-
     // Constructor accepting the slot image and selected slot image
     public UI(GamePanel gp, BufferedImage slotImage, BufferedImage selectedSlotImage) {
         this.gp = gp;
@@ -75,7 +73,6 @@ public class UI {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-        
         //Heart Object
         Entity heart= new OBJ_Heart(gp);
         heart_full=heart.image;
@@ -87,7 +84,6 @@ public class UI {
         Entity bronzeCoin= new OBJ_Coin_Bronze(gp);
         coin = bronzeCoin.down1;
         
-
         // Initialize the slot and selected slot images
         this.slotImage = slotImage;
         this.selectedSlotImage = selectedSlotImage;
@@ -106,9 +102,7 @@ public class UI {
         // Add more items as necessary
     }
 
-    
     public void addMessage(String text) {
-    	
     	message.add(text);
     	messageCounter.add(0);
     }
@@ -117,18 +111,17 @@ public class UI {
     	this.g2= g2;
     	 g2.setFont(ink);
     	 g2.setColor(Color.WHITE);
-    	 //Tital State
-    	 
+    	 //Title State
     	 if(gp.gameState==gp.titleState) {
     		 drawTitleScreen();
     	 }
-    	 
+    	 //play state
     	 if(gp.gameState==gp.playState) {
     		 drawPlayerLife();
     		 drawMonsterLife();
     		 drawMessage();
-
     	 }
+    	 //pause state
     	 if(gp.gameState==gp.pauseState) {
     		 drawPlayerLife();
     		 drawPauseScreen();
@@ -138,7 +131,7 @@ public class UI {
     		 drawPlayerLife();
     		 drawDialogueScreen();
     	 }
-    	 //chaarter State
+    	 //character State
     	 if(gp.gameState==gp.characterState) {
     		 drawCharaterScreen();
     		 drawInventry(gp.player,true);
@@ -162,7 +155,6 @@ public class UI {
     }
     
     public void drawPlayerLife() {
-    	
 //    	gp.player.life=5;
     	int x=gp.tilesize/2;
     	int y= gp.tilesize/2;
@@ -172,11 +164,9 @@ public class UI {
     		g2.drawImage(heart_blank, x, y, null);
     		i++;
     		x+=gp.tilesize;
-    		
     	}
-    	
     	 x=gp.tilesize/2;
-    	 y= gp.tilesize/2;
+    	 y=gp.tilesize/2;
     	 i=0;
     	while(i<gp.player.life) {
     		g2.drawImage(heart_half, x, y, null);
@@ -205,7 +195,6 @@ public class UI {
     		i++;
     		x+=35;
     	}
-    	
     }
     
     public void drawMonsterLife() {
@@ -280,7 +269,6 @@ public class UI {
     	}
     }
     
-    
     public void drawTitleScreen() {
     	
     	g2.setColor(new Color(0,0,0));
@@ -288,7 +276,7 @@ public class UI {
     	
     	//Title Name
     	g2.setFont(g2.getFont().deriveFont(Font.BOLD,55F));
-    	String text = "Nigga's Bizarre Adventure";
+    	String text = "Boy's Bizarre Adventure";
     	int x=getXforCenteredText(text);
     	int y= gp.tilesize*3;
     	//Shadow
@@ -298,7 +286,7 @@ public class UI {
     	g2.setColor(Color.WHITE);
     	g2.drawString(text, x, y);
     	
-    	//Nigga image
+    	//Boy image
     	x=gp.screenwidth/2-(gp.tilesize*2)/2;
     	y+=gp.tilesize*2;
     	g2.drawImage(gp.player.down1, x, y,gp.tilesize*2,gp.tilesize*2,null);
@@ -311,7 +299,7 @@ public class UI {
     	y+=gp.tilesize*3.5;
     	g2.drawString(text, x, y);
     	if(commandNum==0) {
-    		g2.drawString(">", x-gp.tilesize, y);
+    		g2.drawString("-", x-gp.tilesize, y);
     	}
     	
     	text="Load Game";
@@ -319,7 +307,7 @@ public class UI {
     	y+=gp.tilesize;
     	g2.drawString(text, x, y);
     	if(commandNum==1) {
-    		g2.drawString(">", x-gp.tilesize, y);
+    		g2.drawString("-", x-gp.tilesize, y);
     	}
     	
     	text="Quit";
@@ -327,7 +315,7 @@ public class UI {
     	y+=gp.tilesize;
     	g2.drawString(text, x, y);
     	if(commandNum==2) {
-    		g2.drawString(">", x-gp.tilesize, y);
+    		g2.drawString("-", x-gp.tilesize, y);
     	}
     }
     
@@ -339,7 +327,6 @@ public class UI {
     	int y= gp.screenheight/2;
     	
     	g2.drawString(text,x,y);
-    	
     }
     
     public void drawDialogueScreen() {
@@ -366,7 +353,6 @@ public class UI {
     			currentDialogue= combinedText;
     			charIndex++;
     		}
-    		
     		if(gp.keyH.enter==true) {
     			
     			charIndex=0;
@@ -383,7 +369,6 @@ public class UI {
     			gp.gameState=gp.playState;
     		}
     	}
-    	
     	for(String line :currentDialogue.split("\n")) {
         	g2.drawString(line, x, y);
         	y += 40;
@@ -535,7 +520,6 @@ public class UI {
     			g2.fillRoundRect(slotX, slotY, gp.tilesize, gp.tilesize, 10, 10);
     		}
     		
-    		
     		g2.drawImage(entity.inventory.get(i).down1, slotX, slotY, null);
     		
     		//Display amount
@@ -596,8 +580,6 @@ public class UI {
         		}
         	}
     	}
-    	
-    	
     }
     
     public void drawGameOverScreen() {
@@ -639,7 +621,6 @@ public class UI {
     	if(commandNum==0) {
     		g2.drawString("-", x-40, y);
     	}
-    	
     	//Quit
     	text="Quit";
     	x= getXforCenteredText(text);
@@ -648,7 +629,6 @@ public class UI {
     	if(commandNum==1) {
     		g2.drawString("-", x-40, y);
     	}
-    	
     }
     
     public void drawOptionScreen() {
@@ -706,7 +686,6 @@ public class UI {
     	if(commandNum==1) {
     		g2.drawString("-", textX-25, textY);
     	}
-    	
     	//SE
     	textX=frameX+ gp.tilesize;
     	textY+=gp.tilesize;
@@ -714,7 +693,6 @@ public class UI {
     	if(commandNum==2) {
     		g2.drawString("-", textX-25, textY);
     	}
-    	
     	//Control
     	textX=frameX+ gp.tilesize;
     	textY+=gp.tilesize;
@@ -726,7 +704,6 @@ public class UI {
     			commandNum=0;
     		}
     	}
-    	
     	//End Game
     	textX=frameX+ gp.tilesize;
     	textY+=gp.tilesize;
@@ -738,7 +715,6 @@ public class UI {
     			commandNum=0;
     		}
     	}
-    	
     	//BAck
     	textX=frameX+ gp.tilesize;
     	textY+=gp.tilesize*2;
@@ -746,7 +722,6 @@ public class UI {
     	if(commandNum==5) {
     		g2.drawString("-", textX-25, textY);
     	}
-    	
     	//Full screen 
     	textX= frameX + (int)(gp.tilesize*4.5);
     	textY= frameY + gp.tilesize*2 + 24;
@@ -755,13 +730,11 @@ public class UI {
     	if(gp.fullScreenOn==true) {
     		g2.fillRect(textX, textY, 24, 24);
     	}
-    	
     	//Music
     	textY+=gp.tilesize;
     	g2.drawRect(textX, textY, 120, 24);
     	int volumeWidth= 24* gp.music.volumeScale;
     	g2.fillRect(textX, textY, volumeWidth, 24);
-    	
     	//SE
     	textY+=gp.tilesize;
     	g2.drawRect(textX, textY, 120, 24);
@@ -828,7 +801,6 @@ public class UI {
     			commandNum=3;
     		}
     	}
-
     }
     
     public void options_endGameConfirmation(int frameX, int frameY) {
@@ -865,8 +837,7 @@ public class UI {
     			subState=0;
     			commandNum=4;
     		}
-    	}
-    			
+    	}		
     }
     public void drawTransitionScreen() {
     	counter++;
