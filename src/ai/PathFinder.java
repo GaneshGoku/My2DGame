@@ -77,7 +77,7 @@ public class PathFinder {
 			if(gp.tileM.tile[tileNum].collision==true) {
 				node[col][row].solid=true;
 			}
-			//check innteravtive tile
+			//check interactive tile
 			for(int i=0;i<gp.iTile[1].length;i++) {
 				if(gp.iTile[gp.currentMap][i]!= null && gp.iTile[gp.currentMap][i].destructible==true) {
 					int itCol=gp.iTile[gp.currentMap][i].worldX/gp.tilesize;
