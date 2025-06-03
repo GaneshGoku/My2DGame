@@ -176,4 +176,5 @@ Open a Pull Request 🎉
 
 ## video
 
-will uplode the actual game video in while
+(https://youtu.be/Nnh9L-de3po?si=wXdNfwSbUrEncPuE)
+
