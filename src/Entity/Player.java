@@ -164,8 +164,8 @@ public int getCurrentShieldSlot() {
 
     public void getPlayerImage() {
         
-        up1=setup("/player/boy_up_1",gp.tilesize,gp.tilesize);
-        up2=setup("/player/boy_up_2",gp.tilesize,gp.tilesize);
+        up1=setup("/player/mainmc",gp.tilesize,gp.tilesize*2);
+        up2=setup("/player/mainmc",gp.tilesize,gp.tilesize*2);
         down1=setup("/player/boy_down_1",gp.tilesize,gp.tilesize);
         down2=setup("/player/boy_down_2",gp.tilesize,gp.tilesize);
         left1=setup("/player/boy_left_1",gp.tilesize,gp.tilesize);
