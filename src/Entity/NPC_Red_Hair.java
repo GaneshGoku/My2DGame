@@ -28,8 +28,8 @@ public class NPC_Red_Hair extends Entity{
         
         up1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
         up2=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
-        down1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
-        down2=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
+        down1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize*2);
+        down2=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize*2);
         left1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
         left2=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
         right1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
