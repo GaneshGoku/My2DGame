@@ -3,6 +3,7 @@ package main;
 import Entity.NPC_BigRock;
 import Entity.NPC_Mearchant;
 import Entity.NPC_OldMan;
+import Entity.NPC_Red_Hair;
 import monster.MON_Bat;
 import monster.MON_Orc;
 import monster.MON_SkeletonLord;
@@ -108,6 +109,11 @@ public class AssetSetter {
 		gp.npc[mapNum][i]=new NPC_OldMan(gp);
 		gp.npc[mapNum][i].worldX= gp.tilesize*21;
 		gp.npc[mapNum][i].worldY= gp.tilesize*21;
+		i++;
+		gp.npc[mapNum][i]=new NPC_Red_Hair(gp);
+		gp.npc[mapNum][i].worldX= gp.tilesize*27;
+		gp.npc[mapNum][i].worldY= gp.tilesize*21;
+		i++;
 		
 		mapNum=1;
 		i=0;
@@ -129,7 +135,6 @@ public class AssetSetter {
 		gp.npc[mapNum][i].worldX= gp.tilesize*23;
 		gp.npc[mapNum][i].worldY= gp.tilesize*14;
 		i++;
-		
 	}
 	public void setMonster() {
 		int i=0;

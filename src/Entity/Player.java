@@ -164,14 +164,14 @@ public int getCurrentShieldSlot() {
 
     public void getPlayerImage() {
         
-        up1=setup("/player/mainmc",gp.tilesize,gp.tilesize*2);
-        up2=setup("/player/mainmc",gp.tilesize,gp.tilesize*2);
-        down1=setup("/player/boy_down_1",gp.tilesize,gp.tilesize);
-        down2=setup("/player/boy_down_2",gp.tilesize,gp.tilesize);
-        left1=setup("/player/boy_left_1",gp.tilesize,gp.tilesize);
-        left2=setup("/player/boy_left_2",gp.tilesize,gp.tilesize);
-        right1=setup("/player/boy_right_1",gp.tilesize,gp.tilesize);
-        right2=setup("/player/boy_right_2",gp.tilesize,gp.tilesize);
+        up1=setup("/player/ninja_up_1-removebg-preview",gp.tilesize,gp.tilesize);
+        up2=setup("/player/ninja_up_2-removebg-preview",gp.tilesize,gp.tilesize);
+        down1=setup("/player/ninja_down_1-removebg-preview",gp.tilesize,gp.tilesize);
+        down2=setup("/player/ninja_down_2-removebg-preview",gp.tilesize,gp.tilesize);
+        left1=setup("/player/ninja_left_0-removebg-preview",gp.tilesize,gp.tilesize);
+        left2=setup("/player/ninja_left_1-removebg-preview",gp.tilesize,gp.tilesize);
+        right1=setup("/player/ninja_right_0-removebg-preview",gp.tilesize,gp.tilesize);
+        right2=setup("/player/ninja_right_1-removebg-preview",gp.tilesize,gp.tilesize);
 
     }
     
