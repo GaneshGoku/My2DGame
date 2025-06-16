@@ -44,7 +44,7 @@ public class TileManager {
 		tile=new Tile[fileNames.size()];
 		getTileImage();
 		
-		is=getClass().getResourceAsStream("/maps/worldmap.txt");
+		is=getClass().getResourceAsStream("/maps/upper_World.txt");
 		br=new BufferedReader(new InputStreamReader(is));
 		
 		try {
@@ -59,7 +59,7 @@ public class TileManager {
 		}catch(IOException e) {
 			System.out.println("Exceptionn");
 		}
-		loadMap("/maps/worldmap.txt",0);
+		loadMap("/maps/upper_World.txt",0);
 		loadMap("/maps/interior01.txt",1);
 		loadMap("/maps/dungeon01.txt",2);
 		loadMap("/maps/dungeon02.txt",3);
