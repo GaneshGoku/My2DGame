@@ -4,6 +4,7 @@ import Entity.NPC_BigRock;
 import Entity.NPC_Mearchant;
 import Entity.NPC_OldMan;
 import Entity.NPC_Red_Hair;
+import Entity.NPC_White_Hair;
 import monster.MON_Bat;
 import monster.MON_Orc;
 import monster.MON_SkeletonLord;
@@ -111,8 +112,12 @@ public class AssetSetter {
 		gp.npc[mapNum][i].worldY= gp.tilesize*21;
 		i++;
 		gp.npc[mapNum][i]=new NPC_Red_Hair(gp);
-		gp.npc[mapNum][i].worldX= gp.tilesize*27;
-		gp.npc[mapNum][i].worldY= gp.tilesize*21;
+		gp.npc[mapNum][i].worldX= gp.tilesize*73;
+		gp.npc[mapNum][i].worldY= gp.tilesize*76;
+		i++;
+		gp.npc[mapNum][i]=new NPC_White_Hair(gp);
+		gp.npc[mapNum][i].worldX= gp.tilesize*62;
+		gp.npc[mapNum][i].worldY= gp.tilesize*86;
 		i++;
 		
 		mapNum=1;

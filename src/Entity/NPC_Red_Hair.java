@@ -28,8 +28,8 @@ public class NPC_Red_Hair extends Entity{
         
         up1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
         up2=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
-        down1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize*2);
-        down2=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize*2);
+        down1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
+        down2=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
         left1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
         left2=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
         right1=setup("/npc/npc_Red_Hair1",gp.tilesize,gp.tilesize);
@@ -40,8 +40,14 @@ public class NPC_Red_Hair extends Entity{
  	
 	 dialogues[0][0]="Hello Hero";
 	 dialogues[0][1]="You look new to this Island ";
-	 dialogues[0][2]="Are u also finding the treasure like me ??";
-     dialogues[0][3]="Good luck then";
+	 dialogues[0][2]="Are u also finding the treasure \nlike other too ??";
+     dialogues[0][3]="i just here to give maps to new commers";
+     dialogues[0][4]="Good Luck then !!!!!";
+     
+     dialogues[1][0]="NO NO i not coming with u";
+     dialogues[1][1]="i would love to come \nwith u...";
+     dialogues[1][2]="but, i cant leave this job";
+     dialogues[1][3]="watch out for monsters there";
      }
      public void speak() {
 	
