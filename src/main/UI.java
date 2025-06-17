@@ -14,6 +14,9 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+
 import object.OBJ_Key;
 import object.OBJ_ManaCrystal;
 
@@ -25,6 +28,7 @@ public class UI {
     BufferedImage heart_full,heart_half,heart_blank, crystal_full, crystal_blank,coin;
     BufferedImage slotImage; // Image for the inventory slot background
     BufferedImage selectedSlotImage; // Image for the selected slot (highlighted)
+    BufferedImage backgroundImage; //bg image for title screen
     public boolean messageOn= false;
 //    public String message = "";
     
@@ -64,6 +68,7 @@ public class UI {
     // Constructor accepting the slot image and selected slot image
     public UI(GamePanel gp, BufferedImage slotImage, BufferedImage selectedSlotImage) {
         this.gp = gp;
+        loadBackground();
         
         try {
         	InputStream is= getClass().getResourceAsStream("/font/Mantinia_Regular.TTF");
@@ -269,10 +274,22 @@ public class UI {
     	}
     }
     
+    public void loadBackground() {
+        try {
+            backgroundImage = ImageIO.read(getClass().getResourceAsStream("/maps/title_bg.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
     public void drawTitleScreen() {
     	
-    	g2.setColor(new Color(0,0,0));
-    	g2.fillRect(0, 0, gp.screenwidth, gp.screenheight);
+    	if (backgroundImage != null) {
+            g2.drawImage(backgroundImage, 0, 0, gp.screenwidth, gp.screenheight, null);
+        } else {
+            g2.setColor(Color.BLACK);
+            g2.fillRect(0, 0, gp.screenwidth, gp.screenheight);
+        }
     	
     	//Title Name
     	g2.setFont(g2.getFont().deriveFont(Font.BOLD,55F));
@@ -283,7 +300,7 @@ public class UI {
     	g2.setColor(Color.gray);
     	g2.drawString(text, x+5, y+5);
     	
-    	g2.setColor(Color.WHITE);
+    	g2.setColor(Color.BLACK);
     	g2.drawString(text, x, y);
     	
     	//Boy image
