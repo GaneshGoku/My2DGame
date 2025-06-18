@@ -357,11 +357,18 @@ public class UI {
     	g2.setFont(g2.getFont().deriveFont(Font.PLAIN,30F));
     	x+=gp.tilesize;
     	y+=gp.tilesize;
+    	int imageSize = gp.tilesize*6;
+    	int faceX= gp.tilesize-30;
+    	int faceY= y*3;
     	
     	if(npc.dialogues[npc.dialogueSet][npc.dialogueIndex]!=null) {
 //    		currentDialogue= npc.dialogues[npc.dialogueSet][npc.dialogueIndex];
     		
     		char characters[]=npc.dialogues[npc.dialogueSet][npc.dialogueIndex].toCharArray();
+    		
+    		if (npc.faceImage != null) {
+    		    g2.drawImage(npc.faceImage, faceX, faceY, imageSize, imageSize*2, null);
+    		}
     		
     		if(charIndex<characters.length) {
     			gp.PlaySE(17);

@@ -1,6 +1,9 @@
 package Entity;
 
 import java.awt.Rectangle;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import main.GamePanel;
 
@@ -22,6 +25,12 @@ public class NPC_White_Hair extends Entity {
 		getImage();
 		setDialogue();
 		dialogueSet=-1;
+		
+		try {
+			faceImage = ImageIO.read(getClass().getResourceAsStream("/npc/white_hair_1.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
     public void getImage() {
         
