@@ -62,14 +62,18 @@ public class EventHandler {
         }
         if(canTouchEvent==true) {
 
-    		if(hit(0,27,16,"right") == true){damagePit(gp.dialogueState);}
-    		else if(hit(0,23,19,"any") == true){damagePit(gp.dialogueState);}
-    		else if(hit(0,23,12,"up")==true) {healingPool(gp.dialogueState);}
-    		else if(hit(0,10,39,"any")==true) {teleport(1,12,13,gp.indoor);}
-    		else if(hit(1,12,13,"any")==true) {teleport(0,10,39,gp.outside);}
+    		if(hit(0,52,82,"any") == true){damagePit(gp.dialogueState);}
+    		else if(hit(0,40,51,"any") == true){damagePit(gp.dialogueState);}
+    		else if(hit(0,60,75,"up")==true) {healingPool(gp.dialogueState);}
+    		else if(hit(0,75,37,"up")==true) {healingPool(gp.dialogueState);}
+    		else if(hit(0,18,55,"up")==true) {healingPool(gp.dialogueState);}
+    		else if(hit(0,23,89,"up")==true) {healingPool(gp.dialogueState);}
+    		else if(hit(0,72,79,"any")==true) {teleport(1,20,14,gp.indoor);}
+    		else if(hit(0,30,66,"any")==true) {teleport(1,12,13,gp.indoor);}
+    		else if(hit(1,20,15,"any")==true) {teleport(0,73,79,gp.outside);}
     		else if(hit(1,12,9,"up")==true) { speak(gp.npc[1][0]);}
-    		else if(hit(0,12,9,"any")==true) {teleport(2,9,41,gp.dungeon);}
-    		else if(hit(2,9,41,"any")==true) {teleport(0,12,9,gp.outside);}
+    		else if(hit(0,36,83,"any")==true) {teleport(2,9,41,gp.dungeon);}
+    		else if(hit(2,9,41,"any")==true) {teleport(0,36,83,gp.outside);}
     		else if(hit(2,8,7,"any")==true) {teleport(3,26,41,gp.finalBoss);}
     		else if(hit(3,26,41,"any")==true) {teleport(2,8,7,gp.dungeon);}
         }
