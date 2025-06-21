@@ -48,11 +48,11 @@ public class AssetSetter {
 		gp.obj[mapNum][i].worldY= gp.tilesize*82;
 		i++;
 		gp.obj[mapNum][i]= new OBJ_Lantern(gp);
-		gp.obj[mapNum][i].worldX= gp.tilesize*75;
+		gp.obj[mapNum][i].worldX= gp.tilesize*73;
 		gp.obj[mapNum][i].worldY= gp.tilesize*80;
 		i++;
 		gp.obj[mapNum][i]= new OBJ_Tent(gp);
-		gp.obj[mapNum][i].worldX= gp.tilesize*76;
+		gp.obj[mapNum][i].worldX= gp.tilesize*75;
 		gp.obj[mapNum][i].worldY= gp.tilesize*80;
 		i++;
 //		gp.obj[mapNum][i]= new OBJ_Aex(gp);
@@ -61,7 +61,7 @@ public class AssetSetter {
 //		i++;
 		gp.obj[mapNum][i]= new OBJ_Shield_Blue(gp);
 		gp.obj[mapNum][i].worldX= gp.tilesize*73;
-		gp.obj[mapNum][i].worldY= gp.tilesize*75;
+		gp.obj[mapNum][i].worldY= gp.tilesize*79;
 		i++;
 		gp.obj[mapNum][i]= new OBJ_Potion_Red(gp);
 		gp.obj[mapNum][i].worldX= gp.tilesize*35;
